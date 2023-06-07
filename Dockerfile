@@ -10,6 +10,12 @@ ENV REDMINE_VERSION 5.0.5
 ENV REDMINE_DOWNLOAD_SHA256 a89ad1c4bb9bf025e6527c77ab18c8faf7749c94a975caf2cfdbba00eb12a481
 ENV BUNDLE_FORCE_RUBY_PLATFORM 1
 
+ENV DB_HOST=localhost
+ENV DB_PORT=5432
+ENV DB_DATABASE=redmine
+ENV DB_USER=redmine
+ENV DB_PASSWORD=redmine
+
 RUN apk add --no-cache \
 	sudo bash su-exec supervisor ca-certificates tini tzdata wget git libgit2 openssh imagemagick libpq shadow perl gitolite libssh2 libssh2-dev
 
